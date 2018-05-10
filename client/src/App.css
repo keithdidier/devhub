@@ -39,5 +39,11 @@ img {
 }
 
 .btn-info {
-  background-color: dodgerblue !important;
+  background-color: #2196f3 !important;
+}
+
+footer {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
 }
