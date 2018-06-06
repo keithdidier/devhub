@@ -45,7 +45,7 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="login">
+      <div className="login" style={{ height: '100vh' }}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">

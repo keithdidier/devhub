@@ -47,7 +47,7 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="register">
+      <div className="register" style={{ height: '100vh' }}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">

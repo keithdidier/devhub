@@ -17,7 +17,7 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">A Developer's Hub</h1>
+                <h1 className="display-3 mb-4">Build your network</h1>
                 <p className="lead">
                   {' '}
                   Create your profile and connect with other developers
