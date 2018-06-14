@@ -21,6 +21,8 @@ import AddExperience from './components/AddCredentials/AddExperience';
 import AddEducation from './components/AddCredentials/AddEducation';
 import Profiles from './components/Profiles/Profiles';
 import Profile from './components/Profile/Profile';
+import NotFound from './components/NotFound/NotFound';
+import Posts from './components/Posts/Posts';
 
 import './App.css';
 
@@ -54,30 +56,35 @@ class App extends Component {
             <Navbar />
             <Route exact path="/" component={Landing} />
             <div className="container">
-              <Route path="/register" component={Register} />
-              <Route path="/login" component={Login} />
-              <Route path="/profiles" component={Profiles} />
-              <Route path="/profile/:handle" component={Profile} />
               <Switch>
-                <PrivateRoute path="/dashboard" component={Dashboard} />
-              </Switch>
-              <Switch>
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 <PrivateRoute
+                  exact
                   path="/create-profile"
                   component={CreateProfile}
                 />
-              </Switch>
-              <Switch>
-                <PrivateRoute path="/edit-profile" component={EditProfile} />
-              </Switch>
-              <Switch>
                 <PrivateRoute
+                  exact
+                  path="/edit-profile"
+                  component={EditProfile}
+                />
+                <PrivateRoute
+                  exact
                   path="/add-experience"
                   component={AddExperience}
                 />
-              </Switch>
-              <Switch>
-                <PrivateRoute path="/add-education" component={AddEducation} />
+                <PrivateRoute
+                  exact
+                  path="/add-education"
+                  component={AddEducation}
+                />
+                <PrivateRoute exact path="/feed" component={Posts} />
+                <Route exact path="/" component={Landing} />
+                <Route exact path="/register" component={Register} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/profiles" component={Profiles} />
+                <Route exact path="/profile/:handle" component={Profile} />
+                <Route component={NotFound} />
               </Switch>
             </div>
             <Footer />

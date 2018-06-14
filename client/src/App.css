@@ -42,6 +42,14 @@ img {
   background-color: #2196f3 !important;
 }
 
+.bg-info {
+  background-color: #2196f3 !important;
+}
+
+.text-info {
+  color: #2196f3 !important;
+}
+
 .bg-dark {
   background-color: #24292e !important;
 }
