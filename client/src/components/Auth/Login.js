@@ -45,7 +45,7 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="login" style={{ height: '100vh' }}>
+      <div className="login">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -89,4 +89,7 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { loginUser })(Login);
+export default connect(
+  mapStateToProps,
+  { loginUser }
+)(Login);
